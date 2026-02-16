@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection - NIKESHA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-cream': '#FDFBF7',
+                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#1A1A1A',
+                        'brand-accent': '#E8DCCA',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(253, 251, 247, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-brand-gold/10 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="font-serif text-3xl font-bold tracking-wider text-brand-dark hover:text-brand-gold transition-colors">
+                        NIKESHA<span class="text-brand-gold">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="index.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">HOME</a>
+                    <a href="products.html"
+                        class="text-brand-gold font-bold tracking-wide transition-colors border-b-2 border-brand-gold">COLLECTION</a>
+                    <a href="about.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">OUR
+                        STORY</a>
+                    <a href="contact.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">CONTACT</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark hover:text-brand-gold focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-brand-cream absolute w-full border-b border-brand-gold/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">HOME</a>
+                <a href="products.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">COLLECTION</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">OUR STORY</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 bg-brand-accent/20 text-center">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-4">The Collection</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">Curated skincare solutions for timeless beauty.</p>
+    </header>
+
+    <!-- Products Grid -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Dynamic Product Grid -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Products will be injected here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Load Product Data & Logic -->
+    <script src="products-data.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16 text-center mt-12">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-3xl font-serif text-brand-gold mb-4">Ready to Order?</h2>
+            <p class="text-gray-300 mb-6">Experience the luxury of NIKESHA today.</p>
+            <a href="tel:0701266461"
+                class="text-4xl md:text-5xl font-bold hover:text-brand-gold transition-colors block mb-4 tracking-widest">070
+                126 6461</a>
+            <a href="mailto:pamodmalith00@gmail.com"
+                class="text-xl text-gray-400 hover:text-white transition-colors block mb-8">pamodmalith00@gmail.com</a>
+            <div class="border-t border-white/10 pt-8">
+                <p class="text-gray-500 text-sm">&copy; 2026 NIKESHA Skincare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button (Hidden by default) -->
+    <div id="cart-bar"
+        class="fixed bottom-0 left-0 w-full bg-brand-dark text-white p-4 transform translate-y-full transition-transform duration-300 shadow-[0_-5px_15px_rgba(0,0,0,0.1)] z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+                <span class="font-serif text-xl" id="cart-count">0 items added</span>
+                <span class="block text-sm text-gray-400">Review selection at checkout</span>
+            </div>
+            <button onclick="window.location.href='contact.html'"
+                class="bg-brand-gold text-brand-dark font-bold px-8 py-3 rounded-lg hover:bg-white transition-colors shadow-lg">
+                COMPLETE ORDER
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Cart
+        let cart = JSON.parse(localStorage.getItem('nikesha_cart')) || [];
+        updateCartUI();
+
+        function addToOrder(btn) {
+            // Traverse up to find the product card container
+            const card = btn.closest('.group');
+            // Extract Product Name and Price
+            const name = card.querySelector('h3').innerText;
+            const priceText = card.querySelector('.text-brand-gold').innerText;
+
+            // Add to cart array
+            cart.push({ name: name, price: priceText });
+
+            // Save to LocalStorage
+            localStorage.setItem('nikesha_cart', JSON.stringify(cart));
+
+            // UI Feedback
+            updateCartUI();
+
+            // Change button temporarily
+            const originalText = btn.innerText;
+            btn.innerText = "ADDED ✓";
+            btn.classList.add('bg-green-600', 'text-white');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('bg-green-600', 'text-white');
+            }, 1000);
+        }
+
+        function updateCartUI() {
+            const bar = document.getElementById('cart-bar');
+            const countSpan = document.getElementById('cart-count');
+
+            if (cart.length > 0) {
+                bar.classList.remove('translate-y-full');
+                countSpan.innerText = `${cart.length} item(s) in your order`;
+            } else {
+                bar.classList.add('translate-y-full');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKESHA - Premium Beauty Cream</title>
+    <meta name="description"
+        content="Experience the ultimate luxury with NIKESHA beauty cream. Radiance, hydration, and perfection in one jar.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (CDN for standalone usage without Node.js) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-cream': '#FDFBF7',
+                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#1A1A1A',
+                        'brand-accent': '#E8DCCA',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(253, 251, 247, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at center, #FDFBF7 0%, #E8DCCA 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-brand-gold/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="font-serif text-3xl font-bold tracking-wider text-brand-dark hover:text-brand-gold transition-colors">
+                        NIKESHA<span class="text-brand-gold">.</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10">
+                    <a href="index.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">HOME</a>
+                    <a href="products.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">COLLECTION</a>
+                    <a href="about.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">OUR
+                        STORY</a>
+                    <a href="contact.html"
+                        class="text-brand-dark hover:text-brand-gold font-medium tracking-wide transition-colors">CONTACT</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark hover:text-brand-gold focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-brand-cream absolute w-full border-b border-brand-gold/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">HOME</a>
+                <a href="products.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">COLLECTION</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">OUR STORY</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-brand-dark hover:text-brand-gold">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+        class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-to-br from-[#FDFBF7] via-[#fff5e6] to-[#fcebb6]">
+
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-brand-gold/10 rounded-full blur-[100px]">
+            </div>
+            <div class="absolute bottom-[10%] right-[10%] w-[40%] h-[40%] bg-brand-gold/5 rounded-full blur-[80px]">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div
+                        class="inline-block px-4 py-1 mb-6 border border-brand-gold/30 rounded-full bg-white/50 backdrop-blur-sm">
+                        <span class="text-brand-gold font-serif italic text-sm tracking-wider uppercase">The Essence of
+                            Pure Beauty</span>
+                    </div>
+
+                    <h1
+                        class="text-5xl lg:text-7xl font-serif font-bold leading-[1.1] mb-6 text-brand-dark drop-shadow-sm">
+                        Unlock Your <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-[#B8860B] relative">
+                            Eternal Glow
+                            <svg class="absolute w-full h-3 -bottom-1 left-0 text-brand-gold/30" viewBox="0 0 200 9"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.00025 6.99997C25.8082 4.63668 95.8624 0.999991 198.003 2.99999"
+                                    stroke="currentColor" stroke-width="3" />
+                            </svg>
+                        </span>
+                    </h1>
+
+                    <p class="text-gray-600 text-lg mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        Experience NIKESHA — a luxurious blend of rare botanicals and scientific innovation. Designed to
+                        hydrate, illuminate, and perfect your skin from the very first touch.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <a href="products.html"
+                            class="group relative px-8 py-4 bg-brand-dark text-white font-medium overflow-hidden rounded-full shadow-xl shadow-brand-gold/20 hover:shadow-2xl hover:shadow-brand-gold/40 transition-all duration-300">
+                            <span class="relative z-10 flex items-center gap-2">
+                                Shop Collection
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </span>
+                            <div
+                                class="absolute inset-0 h-full w-full bg-gradient-to-r from-brand-gold to-[#B8860B] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+                            </div>
+                        </a>
+                        <a href="about.html"
+                            class="px-8 py-4 border border-brand-dark text-brand-dark font-medium rounded-full hover:bg-brand-dark hover:text-white transition-colors duration-300 flex items-center gap-2 justify-center">
+                            Our Story
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div
+                        class="mt-12 flex items-center justify-center lg:justify-start gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-brand-gold"></div>
+                            <span class="text-sm font-medium">100% Organic</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-brand-gold"></div>
+                            <span class="text-sm font-medium">Cruelty Free</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-brand-gold"></div>
+                            <span class="text-sm font-medium">Dermatologist Tested</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D Scene Container -->
+                <div class="w-full lg:w-1/2 relative h-[600px] lg:h-[700px] perspective-1000" id="canvas-container">
+                    <!-- The 3D Canvas will be injected here by 3d-scene.js -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Load 3D Scene Script as Module -->
+    <script type="module" src="3d-scene.js"></script>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-serif font-bold mb-4">Why Choose NIKESHA?</h2>
+                <div class="h-1 w-20 bg-brand-gold mx-auto"></div>
+                <p class="mt-4 text-gray-600">Formulated with nature's finest ingredients for visible results.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="text-center group p-8 rounded-2xl hover:bg-brand-cream transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3">Deep Hydration</h3>
+                    <p class="text-gray-600">Penetrates deep into the skin layers to provide long-lasting moisture and
+                        plumpness.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center group p-8 rounded-2xl hover:bg-brand-cream transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3">Instant Glow</h3>
+                    <p class="text-gray-600">Revitalizes dull skin instantly, leaving you with a radiant, dewy finish
+                        that lasts all day.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center group p-8 rounded-2xl hover:bg-brand-cream transition-colors duration-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3">Natural Ingredients</h3>
+                    <p class="text-gray-600">100% organic extracts, free from harmful parabens and sulfates. Safe for
+                        all skin types.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Ingredients Section -->
+    <section class="py-24 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold text-brand-dark">The Secret Blend</h2>
+                <p class="text-brand-gold uppercase tracking-widest mt-2 text-sm font-semibold">Power of Nature</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Ingredient 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-brand-gold/10">
+                    <div
+                        class="h-48 bg-gradient-to-br from-yellow-100 to-amber-100 rounded-lg mb-6 overflow-hidden relative group">
+                        <!-- Placeholder for Gold image -->
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-500">
+                            ✨</div>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-brand-dark mb-2">24K Gold Particles</h3>
+                    <p class="text-gray-600 leading-relaxed">Infused with real gold to stimulate collagen production and
+                        improve skin elasticity, giving you a timeless, youthful radiance.</p>
+                </div>
+
+                <!-- Ingredient 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-brand-gold/10">
+                    <div
+                        class="h-48 bg-gradient-to-br from-orange-100 to-red-50 rounded-lg mb-6 overflow-hidden relative group">
+                        <!-- Placeholder for Saffron image -->
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-500">
+                            🌸</div>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-brand-dark mb-2">Kashmir Saffron</h3>
+                    <p class="text-gray-600 leading-relaxed">Known as 'Red Gold', it brightens skin tone, reduces
+                        pigmentation, and imparts a healthy, golden glow.</p>
+                </div>
+
+                <!-- Ingredient 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-brand-gold/10">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg mb-6 overflow-hidden relative group">
+                        <!-- Placeholder for Aloe image -->
+                        <div
+                            class="absolute inset-0 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-500">
+                            🌿</div>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-brand-dark mb-2">Aloe Vera Extract</h3>
+                    <p class="text-gray-600 leading-relaxed">Deeply soothes and hydrates the skin, locking in moisture
+                        and calming inflammation for a smooth texture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax / Image Break -->
+    <section class="relative py-40 bg-fixed bg-center bg-cover"
+        style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-brand-dark/50 mix-blend-multiply"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h2 class="text-4xl md:text-7xl font-serif font-bold mb-6 text-glow">Radiance Redefined</h2>
+            <p class="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto opacity-90">Join thousands of women who
+                have
+                transformed their skin identity with NIKESHA.</p>
+            <a href="contact.html"
+                class="inline-block px-12 py-4 bg-white text-brand-dark font-medium hover:bg-brand-gold hover:text-white transition-all duration-300 rounded-full shadow-lg">
+                Start Your Journey
+            </a>
+        </div>
+    </section>
+
+    <!-- The Ritual Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-64 bg-gray-100 rounded-2xl overflow-hidden shadow-lg"><img
+                                src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1888&auto=format&fit=crop"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="h-64 bg-gray-100 rounded-2xl overflow-hidden shadow-lg mt-8"><img
+                                src="https://images.unsplash.com/photo-1596755094598-496c50545e87?q=80&w=1888&auto=format&fit=crop"
+                                class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl font-serif font-bold mb-6 text-brand-dark">The Daily Ritual</h2>
+                    <p class="text-gray-600 mb-8 text-lg">Achieve professional spa-like results in the comfort of your
+                        home with our simple 3-step application process.</p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-gold text-white flex items-center justify-center font-bold font-serif text-xl">
+                                1</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Cleanse</h4>
+                                <p class="text-gray-500">Begin with a gentle cleanser to remove impurities and prepare
+                                    your skin for absorption.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-gold text-white flex items-center justify-center font-bold font-serif text-xl">
+                                2</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Apply</h4>
+                                <p class="text-gray-500">Take a pearl-sized amount of NIKESHA cream and dot it evenly
+                                    across your face and neck.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-gold text-white flex items-center justify-center font-bold font-serif text-xl">
+                                3</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Massage</h4>
+                                <p class="text-gray-500">Gently massage in upward circular motions until fully absorbed
+                                    to stimulate blood flow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-serif font-bold text-white">Loved by Thousands</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
+                    <div class="flex items-center gap-1 mb-4 text-brand-gold">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"I've tried so many expensive creams, but nothing compares to
+                        NIKESHA. My skin feels softer, and the glow is real!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-gray-500 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Sarah J.</h4>
+                            <p class="text-xs text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
+                    <div class="flex items-center gap-1 mb-4 text-brand-gold">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"The texture is so luxurious and it smells amazing. It's become
+                        the best part of my night routine."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-gray-500 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Michelle K.</h4>
+                            <p class="text-xs text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
+                    <div class="flex items-center gap-1 mb-4 text-brand-gold">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Visible results in just two weeks. My dark spots are fading
+                        and my skin looks so healthy."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-gray-500 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Priya A.</h4>
+                            <p class="text-xs text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-brand-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-center mb-12 text-brand-dark">Frequently Asked Questions</h2>
+
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg p-6 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                    <h3 class="font-bold text-lg text-brand-dark flex justify-between items-center">
+                        Is NIKESHA suitable for all skin types?
+                        <span class="text-brand-gold text-2xl">+</span>
+                    </h3>
+                    <p class="text-gray-600 mt-2 hidden">Yes! NIKESHA is formulated with gentle, organic ingredients
+                        that are safe and effective for sensitive, dry, oily, and combination skin types.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                    <h3 class="font-bold text-lg text-brand-dark flex justify-between items-center">
+                        How long does a jar last?
+                        <span class="text-brand-gold text-2xl">+</span>
+                    </h3>
+                    <p class="text-gray-600 mt-2 hidden">With daily use (morning and night), a standard 50g jar
+                        typically lasts between 4 to 6 weeks.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                    <h3 class="font-bold text-lg text-brand-dark flex justify-between items-center">
+                        Do you ship internationally?
+                        <span class="text-brand-gold text-2xl">+</span>
+                    </h3>
+                    <p class="text-gray-600 mt-2 hidden">Currently, we ship island-wide within Sri Lanka. International
+                        shipping options will be available soon.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Still have questions?</p>
+                <a href="contact.html" class="text-brand-gold font-bold hover:underline">Contact Support &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="font-serif text-3xl font-bold tracking-wider text-white mb-6 block">
+                        NIKESHA<span class="text-brand-gold">.</span>
+                    </a>
+                    Premium skincare designed to elevate your daily ritual. Discover the power of nature and science
+                    combined.
+                    </p>
+                    <p class="mt-6 text-brand-gold font-bold text-lg">Call to Order: 070 126 6461</p>
+                    <p class="mt-2 text-gray-400 text-sm">Email: pamodmalith00@gmail.com</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif font-semibold mb-6 text-brand-gold">Explore</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-white transition-colors">Collection</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">Our Story</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif font-semibold mb-6 text-brand-gold">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif font-semibold mb-6 text-brand-gold">Stay Connected</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for exclusive offers and beauty tips.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="bg-white/10 border-none text-white px-4 py-3 w-full focus:ring-1 focus:ring-brand-gold outline-none">
+                        <button
+                            class="bg-brand-gold text-brand-dark px-6 py-3 font-medium hover:bg-yellow-500 transition-colors">Go</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 NIKESHA Skincare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // FAQ Toggle Logic
+        const faqs = document.querySelectorAll('.space-y-4 > div');
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                // Close others
+                faqs.forEach(item => {
+                    if (item !== faq) {
+                        item.querySelector('p').classList.add('hidden');
+                        item.querySelector('span').innerText = '+';
+                    }
+                });
+
+                // Toggle current
+                const answer = faq.querySelector('p');
+                const icon = faq.querySelector('span');
+                answer.classList.toggle('hidden');
+                icon.innerText = answer.classList.contains('hidden') ? '+' : '-';
+            });
+        });
+    </script>
+</body>
+
+</html>
