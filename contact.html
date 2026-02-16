@@ -552,6 +552,11 @@
 
                     // Clear cart after successful order
                     localStorage.removeItem('nikesha_cart');
+
+                    // Auto Redirect after 3 seconds
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 3000);
                 } else {
                     alert("Error sending order. Please call us.");
                     confirmBtn.innerText = originalText;
